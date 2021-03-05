@@ -134,7 +134,7 @@ def cal_point(el, depth):
             break
 
     # plus paragraph point
-    p_count = len(el.select('> p'))
+    p_count = len(el.select(':scope > p'))
     if p_count:
         mul += math.sqrt(depth) / 5
 
