@@ -58,7 +58,7 @@ def get_or_download_image(src, image_dir, referrer=None):
             headers = {'Referer': referrer}
         else:
             headers = None
-        req = requests.get(src, timeout=15, stream=True, headers=headers)
+        req = requests.get(src, timeout=15, stream=True, headers=headers, verify=False)
     except Exception as e:
         log.exception(e)
         return None

@@ -15,7 +15,6 @@ def create_jinja():
         extensions=[
             'jinja2.ext.do',
             'jinja2.ext.loopcontrols',
-            'jinja2.ext.with_',
         ]
     )
     jinja.filters.update({

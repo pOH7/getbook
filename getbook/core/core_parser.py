@@ -24,7 +24,7 @@ KILL_TAGS = [
 ]
 
 DEFAULT_USER_AGENT = (
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12'
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
     ' (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12'
     ' facebookexternalhit/1.1 Facebot Twitterbot/1.0'
 )
@@ -58,7 +58,7 @@ class Parser(object):
     def _request(self, url):
         user_agent = self.get_user_agent(url)
         headers = {'User-Agent': user_agent}
-        req = requests.get(url, timeout=5, headers=headers)
+        req = requests.get(url, timeout=5, headers=headers, verify=False)
 
         if req.status_code != 200:
             raise RuntimeError("Not available %s" % req.status_code)
