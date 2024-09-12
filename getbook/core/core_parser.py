@@ -25,8 +25,6 @@ KILL_TAGS = [
 
 DEFAULT_USER_AGENT = (
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
-    ' (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12'
-    ' facebookexternalhit/1.1 Facebot Twitterbot/1.0'
 )
 CHARSET_PATTERN = re.compile(r'<meta.*(charset="?\w+"?).*?>', re.I)
 LXML_SPACE = 'lxml-space'
